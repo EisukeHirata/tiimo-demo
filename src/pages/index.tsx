@@ -16,7 +16,8 @@ import { Introduction } from "@/components/introduction";
 import { Menu } from "@/components/menu";
 import { GitHubLink } from "@/components/githubLink";
 import { Meta } from "@/components/meta";
-import { PromptInput } from "@/components/promptInput";
+
+import { ChatLog } from "@/components/chatLog";
 
 const m_plus_2 = M_PLUS_2({
   variable: "--font-m-plus-2",
@@ -189,6 +190,7 @@ export default function Home() {
         isChatProcessing={chatProcessing}
         onChatProcessStart={handleSendChat}
       />
+
       <Menu
         openAiKey={openAiKey}
         systemPrompt={systemPrompt}
