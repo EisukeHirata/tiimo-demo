@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, use, useEffect } from "react";
 import { Link } from "./link";
 
 type Props = {
@@ -6,7 +6,8 @@ type Props = {
   onChangeAiKey: (openAiKey: string) => void;
 };
 export const Introduction = ({ openAiKey, onChangeAiKey }: Props) => {
-  const [opened, setOpened] = useState(true);
+  // set default value as false
+  const [opened, setOpened] = useState(false);
 
   const handleAiKeyChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {

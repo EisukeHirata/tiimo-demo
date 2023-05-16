@@ -1,7 +1,10 @@
 import { Configuration, OpenAIApi } from "openai";
 import { Message } from "../messages/messages";
 
+console.log("openAiChat.ts: " + process.env.NEXT_PUBLIC_OPENAI_API_KEY);
+
 export async function getChatResponse(messages: Message[], apiKey: string) {
+  console.log("APIKey1: " + apiKey);
   if (!apiKey) {
     throw new Error("Invalid API Key");
   }
@@ -31,6 +34,7 @@ export async function getChatResponseStream(
   apiKey: string
 ) {
   if (!apiKey) {
+    console.log("APIKey2: " + apiKey);
     throw new Error("Invalid API Key");
   }
 
