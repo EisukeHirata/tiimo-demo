@@ -16,6 +16,7 @@ import { Introduction } from "@/components/introduction";
 import { Menu } from "@/components/menu";
 import { GitHubLink } from "@/components/githubLink";
 import { Meta } from "@/components/meta";
+import { PromptInput } from "@/components/promptInput";
 
 const m_plus_2 = M_PLUS_2({
   variable: "--font-m-plus-2",
