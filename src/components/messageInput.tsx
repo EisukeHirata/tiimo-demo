@@ -23,13 +23,15 @@ export const MessageInput = ({
       <div className="bg-base text-black">
         <div className="mx-auto max-w-4xl p-16">
           <div className="grid grid-flow-col gap-[8px] grid-cols-[min-content_1fr_min-content]">
+            {/* remove mic button and set dummy div
             <IconButton
               iconName="24/Microphone"
               className="bg-secondary hover:bg-secondary-hover active:bg-secondary-press disabled:bg-secondary-disabled"
               isProcessing={isMicRecording}
               disabled={isChatProcessing}
               onClick={onClickMicButton}
-            />
+  />*/}
+            <div className="h-6 w-6"></div>
             <input
               type="text"
               placeholder="聞きたいことをいれてね"

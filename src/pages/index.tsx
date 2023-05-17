@@ -156,10 +156,21 @@ export default function Home() {
             aiTextLog += aiText;
 
             // 文ごとに音声を生成 & 再生、返答を表示
-            const currentAssistantMessage = sentences.join(" ");
+            //test delete
+            /* const currentAssistantMessage = sentences.join(" ");
             handleSpeakAi(aiTalks[0], () => {
               setAssistantMessage(currentAssistantMessage);
-            });
+            });*/
+
+            //add test
+            const messageLogAssistant: Message[] = [
+              ...messageLog,
+              { role: "assistant", content: aiTextLog },
+            ];
+
+            setChatLog(messageLogAssistant);
+            setAssistantMessage(aiTextLog);
+            setChatProcessing(false);
           }
         }
       } catch (e) {
