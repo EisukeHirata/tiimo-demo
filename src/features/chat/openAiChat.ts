@@ -2,7 +2,6 @@ import { Configuration, OpenAIApi } from "openai";
 import { Message } from "../messages/messages";
 
 export async function getChatResponse(messages: Message[], apiKey: string) {
-  console.log("APIKey1: " + apiKey);
   if (!apiKey) {
     throw new Error("Invalid API Key");
   }
@@ -32,9 +31,10 @@ export async function getChatResponseStream(
   apiKey: string
 ) {
   if (!apiKey) {
-    console.log("APIKey2: " + apiKey);
     throw new Error("Invalid API Key");
   }
+
+  console.log("Sending messages: ", messages);
 
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
@@ -50,6 +50,8 @@ export async function getChatResponseStream(
       max_tokens: 200,
     }),
   });
+  console.log("Response status:", res.status);
+  console.log("Response headers:", res.headers);
 
   const reader = res.body?.getReader();
   if (res.status !== 200 || !reader) {
@@ -71,6 +73,8 @@ export async function getChatResponseStream(
             const json = JSON.parse(chunk);
             const messagePiece = json.choices[0].delta.content;
             if (!!messagePiece) {
+              console.log("Received message piece: ", messagePiece); // AIからのメッセージ片をログに出力
+
               controller.enqueue(messagePiece);
             }
           }

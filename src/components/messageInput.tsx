@@ -18,6 +18,15 @@ export const MessageInput = ({
   onClickMicButton,
   onClickSendButton,
 }: Props) => {
+  // New handler for the onKeyDown event
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Prevents the default action of the event (form submission, line break, etc.)
+      if (!isChatProcessing && userMessage) {
+        onClickSendButton(event as any);
+      }
+    }
+  };
   return (
     <div className="absolute bottom-0 z-20 w-screen">
       <div className="bg-base text-black">
@@ -34,8 +43,9 @@ export const MessageInput = ({
             <div className="h-6 w-6"></div>
             <input
               type="text"
-              placeholder="聞きたいことをいれてね"
+              placeholder="Meesage"
               onChange={onChangeUserMessage}
+              onKeyDown={handleKeyDown} // Add the onKeyDown handler here
               disabled={isChatProcessing}
               className="bg-surface1 hover:bg-surface1-hover focus:bg-surface1 disabled:bg-surface1-disabled disabled:text-primary-disabled rounded-16 w-full px-16 text-text-primary typography-16 font-M_PLUS_2 font-bold disabled"
               value={userMessage}
