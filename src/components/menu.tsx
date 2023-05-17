@@ -6,6 +6,7 @@ import React, { useCallback, useContext, useRef, useState } from "react";
 import { Settings } from "./settings";
 import { ViewerContext } from "@/features/vrmViewer/viewerContext";
 import { AssistantText } from "./assistantText";
+import { Sidebar } from "./sidebar";
 
 type Props = {
   openAiKey: string;
@@ -85,7 +86,7 @@ export const Menu = ({
 
   return (
     <>
-      <div className="absolute z-10 m-24">
+      <div className="absolute right-0 z-10 m-24">
         <div className="grid grid-flow-col gap-[8px]">
           {/*<IconButton
             iconName="24/Menu"

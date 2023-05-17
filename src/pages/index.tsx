@@ -19,8 +19,7 @@ import { Introduction } from "@/components/introduction";
 import { Menu } from "@/components/menu";
 import { GitHubLink } from "@/components/githubLink";
 import { Meta } from "@/components/meta";
-
-import { ChatLog } from "@/components/chatLog";
+import { Sidebar } from "@/components/sidebar";
 
 const m_plus_2 = M_PLUS_2({
   variable: "--font-m-plus-2",
@@ -239,6 +238,7 @@ export default function Home() {
         onChangeChatLog={handleChangeChatLog}
         onChangeKoeiromapParam={setKoeiroParam}
       />
+      <Sidebar />
     </div>
   );
 }
