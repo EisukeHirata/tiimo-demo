@@ -20,6 +20,7 @@ import { Menu } from "@/components/menu";
 import { GitHubLink } from "@/components/githubLink";
 import { Meta } from "@/components/meta";
 import { Sidebar } from "@/components/sidebar";
+import { Test } from "@/components/testModule";
 
 const m_plus_2 = M_PLUS_2({
   variable: "--font-m-plus-2",
@@ -218,27 +219,29 @@ export default function Home() {
   );
 
   return (
-    <div className={`${m_plus_2.variable} ${montserrat.variable}`}>
-      <Meta />
-      <Introduction openAiKey={openAiKey} onChangeAiKey={setOpenAiKey} />
-      <VrmViewer />
-      <MessageInputContainer
-        isChatProcessing={chatProcessing}
-        onChatProcessStart={handleSendChat}
-      />
+    <div>
+      <div className={`${m_plus_2.variable} ${montserrat.variable}`}>
+        <Meta />
+        <Introduction openAiKey={openAiKey} onChangeAiKey={setOpenAiKey} />
+        <VrmViewer />
+        <MessageInputContainer
+          isChatProcessing={chatProcessing}
+          onChatProcessStart={handleSendChat}
+        />
 
-      <Menu
-        openAiKey={openAiKey}
-        systemPrompt={systemPrompt}
-        chatLog={chatLog}
-        koeiroParam={koeiroParam}
-        assistantMessage={assistantMessage}
-        onChangeAiKey={setOpenAiKey}
-        onChangeSystemPrompt={setSystemPrompt}
-        onChangeChatLog={handleChangeChatLog}
-        onChangeKoeiromapParam={setKoeiroParam}
-      />
-      <Sidebar />
+        <Menu
+          openAiKey={openAiKey}
+          systemPrompt={systemPrompt}
+          chatLog={chatLog}
+          koeiroParam={koeiroParam}
+          assistantMessage={assistantMessage}
+          onChangeAiKey={setOpenAiKey}
+          onChangeSystemPrompt={setSystemPrompt}
+          onChangeChatLog={handleChangeChatLog}
+          onChangeKoeiromapParam={setKoeiroParam}
+        />
+        <Sidebar />
+      </div>
     </div>
   );
 }

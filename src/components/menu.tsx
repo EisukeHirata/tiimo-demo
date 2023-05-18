@@ -7,6 +7,7 @@ import { Settings } from "./settings";
 import { ViewerContext } from "@/features/vrmViewer/viewerContext";
 import { AssistantText } from "./assistantText";
 import { Sidebar } from "./sidebar";
+import { Side } from "three";
 
 type Props = {
   openAiKey: string;
@@ -130,6 +131,7 @@ export const Menu = ({
       {!showChatLog && assistantMessage && (
         <AssistantText message={assistantMessage} />
       )}
+
       <input
         type="file"
         className="hidden"

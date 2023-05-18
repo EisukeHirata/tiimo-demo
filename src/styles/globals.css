@@ -8,7 +8,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 @layer components {
   .input-range {
     -webkit-appearance: none;
@@ -36,7 +35,6 @@ body {
     -webkit-border-radius: 50%;
   }
 }
-
 @layer utilities {
   .scroll-hidden {
     -ms-overflow-style: none;
