@@ -7,6 +7,7 @@ export const Meta = () => {
   const imageUrl = "https://pixiv.github.io/ChatVRM/ogp.png";
   return (
     <Head>
+      <link rel="icon" href="/favicon.png" />
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta property="og:title" content={title} />
