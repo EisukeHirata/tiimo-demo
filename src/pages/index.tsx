@@ -20,6 +20,7 @@ import { Menu } from "@/components/menu";
 import { GitHubLink } from "@/components/githubLink";
 import { Meta } from "@/components/meta";
 import { Sidebar } from "@/components/sidebar";
+
 import "flowbite";
 
 const m_plus_2 = M_PLUS_2({

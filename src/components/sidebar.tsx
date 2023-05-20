@@ -1,6 +1,3 @@
-import Image from "next/image";
-import { IconButton } from "@/components/iconButton";
-
 export const Sidebar = () => {
   return (
     <div>
