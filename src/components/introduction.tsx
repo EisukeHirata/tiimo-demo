@@ -17,7 +17,7 @@ export const Introduction = ({ openAiKey, onChangeAiKey }: Props) => {
   );
 
   return opened ? (
-    <div className="absolute z-40 w-full h-full px-24 py-40  bg-black/30 font-M_PLUS_2">
+    <div className="absolute z-40 w-full h-full  px-24 py-40   bg-black/30 font-M_PLUS_2">
       <div className="mx-auto my-auto max-w-3xl max-h-full p-24 overflow-auto bg-white rounded-16">
         <div className="my-24">
           <div className="my-8 font-bold typography-20 text-secondary ">
@@ -28,6 +28,21 @@ export const Introduction = ({ openAiKey, onChangeAiKey }: Props) => {
             personalized education. Say Hi and start class!
           </div>
         </div>
+        <div className="my-24">
+          <div className="my-8 font-bold typography-20 text-secondary ">
+            Join the waitlist!
+          </div>
+          <div>
+            A waitlist is now open! Join the waitlist to get early access to
+            Tiimo!
+          </div>
+          <a
+            className="text-sm text-blue-800 underline font-medium hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
+            href="https://tiimo.ai/"
+          >
+            Join the waitlist
+          </a>
+        </div>
 
         <div className="my-24">
           <button
@@ -36,7 +51,7 @@ export const Introduction = ({ openAiKey, onChangeAiKey }: Props) => {
             }}
             className="font-bold bg-secondary hover:bg-secondary-hover active:bg-secondary-press disabled:bg-secondary-disabled text-white px-24 py-8 rounded-oval"
           >
-            Join a class
+            Start Tiimo
           </button>
         </div>
       </div>
