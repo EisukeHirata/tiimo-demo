@@ -4,7 +4,8 @@ export const Meta = () => {
   const title = "Tiimo Demo";
   const description =
     "Your Virtual AI Teacher. Learn with your personal AI teacher and develop your skills further";
-  const imageUrl = "https://i.imgur.com/wetSKi0.png";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL; // add your base url here
+  const imageUrl = `${baseUrl}/ogp.png`;
   return (
     <Head>
       <link rel="icon" href="/favicon.png" />
