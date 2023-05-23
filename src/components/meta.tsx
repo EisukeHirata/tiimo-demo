@@ -4,7 +4,7 @@ export const Meta = () => {
   const title = "Tiimo Demo";
   const description =
     "Your Virtual AI Teacher. Learn with your personal AI teacher and develop your skills further";
-  const imageUrl = "/public/ogp.png";
+  const imageUrl = "https://i.imgur.com/wetSKi0.png";
   return (
     <Head>
       <link rel="icon" href="/favicon.png" />
