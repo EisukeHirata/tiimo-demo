@@ -241,7 +241,7 @@ export default function Home() {
           onChangeChatLog={handleChangeChatLog}
           onChangeKoeiromapParam={setKoeiroParam}
         />
-        <Sidebar />
+        {/* <Sidebar />*/}
       </div>
     </div>
   );
