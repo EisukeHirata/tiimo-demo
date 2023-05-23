@@ -4,7 +4,7 @@ export const Meta = () => {
   const title = "Tiimo Demo";
   const description =
     "Your Virtual AI Teacher. Learn with your personal AI teacher and develop your skills further";
-  const imageUrl = "https://pixiv.github.io/ChatVRM/ogp.png";
+  const imageUrl = "/public/ogp.png";
   return (
     <Head>
       <link rel="icon" href="/favicon.png" />
