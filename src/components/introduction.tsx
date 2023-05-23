@@ -24,24 +24,14 @@ export const Introduction = ({ openAiKey, onChangeAiKey }: Props) => {
             Welcome to Demo of Tiimo!
           </div>
           <div>
-            Tiimo is a virtual AI teacher using LLM such as ChatGPT to provide
-            personalized education. Say Hi and start class!
+            Tiimo is a virtual AI teacher using ChatGPT to provide personalized
+            education.
           </div>
         </div>
         <div className="my-24">
           <div className="my-8 font-bold typography-20 text-secondary ">
-            Join the waitlist!
+            Say Hi and start class!
           </div>
-          <div>
-            A waitlist is now open! Join the waitlist to get early access to
-            Tiimo!
-          </div>
-          <a
-            className="text-sm text-blue-800 underline font-medium hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
-            href="https://tiimo.ai/"
-          >
-            Join the waitlist
-          </a>
         </div>
 
         <div className="my-24">
