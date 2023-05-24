@@ -43,7 +43,7 @@ export const MessageInput = ({
             <div className="h-6 w-6"></div>
             <input
               type="text"
-              placeholder="Meesage"
+              placeholder="Message"
               onChange={onChangeUserMessage}
               onKeyDown={handleKeyDown} // Add the onKeyDown handler here
               disabled={isChatProcessing}
